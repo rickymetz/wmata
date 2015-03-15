@@ -1,10 +1,16 @@
-<% @results["Incidents"].each do |line|%>
-	<% if line["LinesAffected"]=="RD;" %>
-		<div class="line-<%= line["LinesAffected"].gsub(';', '') %>">
-			<h2>Red Line:</h2>
-			<h3><%= line["Description"].gsub('Red Line: ', '')%></h3>
-		</div>
-	<% else %>
-		
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Red line</h2>
+  </div>
+  <div class="panel-body">
+    <% @results["Incidents"].each do |line|%>
+		<% if line["LinesAffected"]=="RD;" %>
+			<div class="line-<%= line["LinesAffected"].gsub(';', '') %>">
+				<p><%= line["Description"].gsub('Red Line: ', '')%></p>
+			</div>
+		<% else %>
+			
+		<% end %>
 	<% end %>
-<% end %>
+  </div>
+</div>

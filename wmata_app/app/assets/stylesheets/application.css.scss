@@ -14,3 +14,43 @@
  *= require_self
  */
 
+h1.page-title{
+	margin: 2em 0;
+}
+
+[class*="line-"] h2::before { 
+    content: "\25CF";
+    margin-right: 10px;
+}
+
+.line-blue{
+	& h2::before{
+		color: blue;
+	}
+}
+
+.line-green{
+	& h2::before{
+		color: green;
+	}
+}
+.line-orange{
+	& h2::before{
+		color: orange;
+	}
+}
+.line-red{
+	& h2::before{
+		color: red;
+	}
+}
+.line-silver{
+	& h2::before{
+		color: silver;
+	}
+}
+.line-yellow{
+	& h2::before{
+		color: yellow;
+	}
+}
