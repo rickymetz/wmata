@@ -1,0 +1,10 @@
+<% @results["Incidents"].each do |line|%>
+	<% if line["LinesAffected"]=="RD;" %>
+		<div class="line-<%= line["LinesAffected"].gsub(';', '') %>">
+			<h2>Red Line:</h2>
+			<h3><%= line["Description"].gsub('Red Line: ', '')%></h3>
+		</div>
+	<% else %>
+		
+	<% end %>
+<% end %>

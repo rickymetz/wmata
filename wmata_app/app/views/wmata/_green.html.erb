@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Green line</h2>
+  </div>
+  <div class="panel-body">
+    <% @results["Incidents"].each do |line|%>
+		<% if line["LinesAffected"]=="GR;" %>
+			<div class="line-<%= line["LinesAffected"].gsub(';', '') %>">
+				<p><%= line["Description"].gsub('Green Line: ', '')%></p>
+			</div>
+		<% else %>
+			
+		<% end %>
+	<% end %>
+  </div>
+</div>
