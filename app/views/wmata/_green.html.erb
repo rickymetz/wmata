@@ -7,6 +7,7 @@
 		<% if line["LinesAffected"]=="GR;" %>
 			<div class="line-<%= line["LinesAffected"].gsub(';', '') %>">
 				<p><%= line["Description"].gsub('Green Line: ', '')%></p>
+				<h5>Updated: <%= line["DateUpdated"]%></h5>
 			</div>
 		<% else %>
 			
